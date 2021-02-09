@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CEP no Kotlin</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="txt_hint">Digite o cep. Ex.01001-001</string>
+    <string name="txt_button">buscar cep</string>
+    <string name="txt_instrucao">Endereço correto? Clique nele!</string>
+</resources>
