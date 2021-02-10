@@ -67,7 +67,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="389dp"
-        android:background="#599D969E"
+        android:background="#DC9D969E"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#00B8D4"
         android:textSize="16sp"

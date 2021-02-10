@@ -98,7 +98,7 @@ class MainActivity : AppCompatActivity() {
                             txt_resultado.text = "Por favor, digite um CEP válido"
                         else -> {
                             txt_aviso.visibility = View.VISIBLE
-                            txt_resultado.text = "$logradouro,$bairro - $cidade-$uf"
+                            txt_resultado.text = "$logradouro, $bairro - $cidade-$uf"
                         }
                     }
                 }
@@ -116,7 +116,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onPause() {
         super.onPause()
-        if (mediaPlayer.isPlaying) {
+        if (mediaPlayer != null) {
             mediaPlayer.pause()
         }
     }
