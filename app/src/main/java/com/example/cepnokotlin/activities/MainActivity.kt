@@ -112,12 +112,11 @@ class MainActivity : AppCompatActivity() {
         mediaPlayer.setVolume(0.5f, 0.5f)
         totalTime = mediaPlayer.duration
         mediaPlayer.start()
-
     }
 
     override fun onPause() {
         super.onPause()
-        if (mediaPlayer != null) {
+        if (mediaPlayer.isPlaying) {
             mediaPlayer.pause()
         }
     }

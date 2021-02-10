@@ -5,30 +5,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#9d969e"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
     tools:context=".activities.MainActivity">
+
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#9d969e"
+        android:layout_marginTop="1dp"
+        android:background="#DC9D969E"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_buscar"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/carteiro" />
-
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/digite_cep"
-        android:layout_width="379dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="220dp"
-        android:textColorHint="#0055FF"
-        android:padding="4dp"
+        android:layout_marginBottom="15dp"
         android:background="#ADAAA7A7"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
+        android:padding="4dp"
+        android:textColorHint="#0055FF"
+        app:layout_constraintBottom_toTopOf="@+id/bt_buscar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -37,58 +42,57 @@
             android:id="@+id/edit_cep"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="#0055FF"
-            android:hint="@string/txt_hint"
             android:background="#6BD4D2D5"
+            android:hint="@string/txt_hint"
             android:inputType="numberDecimal"
-            android:maxLength="8" />
+            android:maxLength="8"
+            android:textColor="#0055FF" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/bt_buscar"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="50dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
         android:text="@string/txt_button"
+        app:layout_constraintBottom_toTopOf="@+id/txt_aviso"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/digite_cep" />
 
     <TextView
         android:id="@+id/txt_resultado"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="320dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:textSize="16sp"
+        android:layout_marginBottom="389dp"
         android:background="#599D969E"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#00B8D4"
+        android:textSize="16sp"
         android:textStyle="bold"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bt_buscar"
-        tools:text="Rua do fogo, 666" />
+        app:layout_constraintEnd_toEndOf="@+id/txt_aviso"
+        app:layout_constraintStart_toStartOf="@+id/txt_aviso"
+        app:layout_constraintTop_toBottomOf="@+id/txt_aviso"
+        tools:text="@string/txt_endereco_completo" />
 
     <TextView
         android:id="@+id/txt_aviso"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="21dp"
+        android:background="#DC9D969E"
         android:text="@string/txt_instrucao"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:visibility="gone"
-        android:textStyle="bold"
         android:textColor="@color/purple_700"
-        android:background="#599D969E"
+        android:textStyle="bold"
+        android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@+id/txt_resultado"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/bt_buscar"
+        app:layout_constraintStart_toStartOf="@+id/bt_buscar"
         app:layout_constraintTop_toBottomOf="@+id/bt_buscar"
         tools:visibility="visible" />
 
